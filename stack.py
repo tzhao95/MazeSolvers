@@ -17,7 +17,7 @@ class stack():
 		return len(self.list)
 
 s = stack()
-print s.size()
+print (s.size())
 s.push(1)
 s.push(2)
 s.push(3)
@@ -29,4 +29,4 @@ print (s.list)
 
 print (s.top())
 
-print s.size()
+print (s.size())

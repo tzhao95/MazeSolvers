@@ -34,7 +34,7 @@ def bfs(maze, list):
 		maze.mark_maze(list.top())
 		list.popf()
 		list.shift()
-		print list.top().x
+		print (list.top().x)
 		maze.print_maze()
 
 def main(maze):

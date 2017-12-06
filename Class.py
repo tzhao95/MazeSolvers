@@ -32,11 +32,11 @@ class Maze():
 		b = 0
 		for row in self.maze:
 			for col in row:
-				print self.maze[b][a],
+				print (self.maze[b][a], end = " ")
 				a += 1
 			b += 1
 			a = 0
-			print " "
+			print (" ")
 
 	def mark_maze(self, coordinate):
 		self.maze[coordinate.y][coordinate.x] = "Y"
@@ -59,8 +59,8 @@ class Coordinates():
 
 	def check_end(self, maze): #check to see if coordinates meet end condition assuming end condition is the space is 'B'
 		if maze[self.y][self.x] == "B":
-			print "COMPLETE! BITCH!"
-			print self.x, self.y
+			print ("COMPLETE! BITCH!")
+			print (self.x, self.y)
 			return True
 
 ########################################################################################
@@ -110,27 +110,27 @@ class MazeRunner():
 			self.x_pos = self.tracker.top().x
 			self.y_pos = self.tracker.top().y
 			#maze.mark_maze(self.tracker.top())
-			print "up"
+			print ("up")
 			return True
 		if dir == 2:
 			self.x_pos = self.tracker.top().x
 			self.y_pos = self.tracker.top().y
-			print "left"
+			print ("left")
 			return True
 		if dir == 3:
 			self.x_pos = self.tracker.top().x
 			self.y_pos = self.tracker.top().y
-			print "down"
+			print ("down")
 			return True
 		if dir == 4:
 			self.x_pos = self.tracker.top().x
 			self.y_pos = self.tracker.top().y
-			print "right"
+			print ("right")
 			return True
 		else:
 			self.tracker.pop()
 			self.x_pos = self.tracker.top().x
 			self.y_pos = self.tracker.top().y
-			print "Backed Up"
+			print ("Backed Up")
 			return False
 
