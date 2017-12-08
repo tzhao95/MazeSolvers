@@ -22,7 +22,7 @@ class Maze():
 					self.start_x = a
 					sY = b
 					self.start_y = b
-					return [sX, sY] #since this is here, I should just make it return a coordinate
+					return Coordinates(sX, sY) #since this is here, I should just make it return a coordinate
 				a += 1
 			b += 1
 			a = 0
@@ -62,6 +62,8 @@ class Coordinates():
 			print ("COMPLETE! BITCH!")
 			print (self.x, self.y)
 			return True
+		else:
+			print("you suck")
 
 ########################################################################################
 class PositionTracker(stack):
