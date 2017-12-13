@@ -41,7 +41,7 @@ class Maze():
 	def mark_maze(self, coordinate):
 		self.maze[coordinate.y][coordinate.x] = "Y"
 
-####Test maze to make sure the code works#########################################
+####Test maze to make re the code works#########################################
 
 file = open("maze.txt", "r")
 maze = []
@@ -57,13 +57,11 @@ class Coordinates():
 		self.x = x #current x coordinate
 		self.y = y #current y coordinates
 
-	def check_end(self, maze): #check to see if coordinates meet end condition assuming end condition is the space is 'B'
+	def check_end(self, maze): #check to see if coordinates meet end condition asming end condition is the space is 'B'
 		if maze[self.y][self.x] == "B":
 			print ("COMPLETE! BITCH!")
 			print (self.x, self.y)
 			return True
-		else:
-			print("you suck")
 
 ########################################################################################
 class PositionTracker(stack):

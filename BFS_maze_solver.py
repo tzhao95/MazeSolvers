@@ -35,19 +35,24 @@ def print_tracker(tracker): #designed for trackers holding coordinates
 		print(i, "x:%d" % (tracker[i].x), "y:%d" % (tracker[i].y))
 		i = i+1
 
+#Run into issue where my tracker runs out of memory and cannot store any new values.
 def solve(maze, tracker):
 	i = 1
 	print_tracker(tracker)
 	while (i > 0):
-		#pdb.set_trace()
 		if (tracker[i].check_end(maze.maze)):
 			return
 		check_adjacent(tracker[i], a, tracker)
+		#tracker.append(Coordinates(0,0))
 		#print_tracker(tracker)
-		if (maze.maze[tracker[i].y][tracker[i].x] != ' '):
+		if (maze.maze[tracker[i].y][tracker[i].x] != 'Y'):
+			pdb.set_trace()
 			maze.maze[tracker[i].y][tracker[i].x] = 'Y'
+			print("Just changed: %d, %d" % (tracker[i].x, tracker[i].y))
+			tracker[i].x = 0
+			tracker[i].y = 0
 		a.print_maze()
-		pdb.set_trace()
+		#pdb.set_trace()
 		i = i + 1
 
 i = 0
